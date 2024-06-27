@@ -9,12 +9,7 @@ public class Employee {
     @Id
     // Ensure this field exists
     private int id;
-    private String name;
-    private Long designationId;
-    private String mobileNo;
-    private String email;
-    private String password;
-    private String address;
+    private int User_id;
     private String createdBy;
     private String updatedBy;
     private String creationDate;
@@ -29,52 +24,12 @@ public class Employee {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public int getUser_id() {
+        return User_id;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Long getDesignationId() {
-        return designationId;
-    }
-
-    public void setDesignationId(Long designationId) {
-        this.designationId = designationId;
-    }
-
-    public String getMobileNo() {
-        return mobileNo;
-    }
-
-    public void setMobileNo(String mobileNo) {
-        this.mobileNo = mobileNo;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
+    public void setUser_id(int user_id) {
+        User_id = user_id;
     }
 
     public String getCreatedBy() {
@@ -116,6 +71,9 @@ public class Employee {
     public void setDeleted(boolean deleted) {
         this.deleted = deleted;
     }
+
+
+
 
 
 

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@RequestMapping("/home4")
+@RequestMapping("/RequestComments")
 public class CommentsController {
         @Autowired
         private CommentsService commentsService;

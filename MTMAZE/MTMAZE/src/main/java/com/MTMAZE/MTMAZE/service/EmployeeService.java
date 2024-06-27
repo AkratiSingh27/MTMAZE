@@ -24,9 +24,7 @@ public class EmployeeService {
         return employeeRepository.findById(id).orElse(null);
     }
 
-    public Employee getEmployeeByName(String name) {
-        return employeeRepository.findByName(name);
-    }
+
     public String deleteEmployee(int id) {
         employeeRepository.deleteById(id); // Corrected this line
         return "Employee Removed!! " + id;
@@ -34,12 +32,7 @@ public class EmployeeService {
 
     public Employee updateEmployee(Employee employee) {
         Employee existingEmployee = employeeRepository.findById(employee.getId()).orElse(null);
-            existingEmployee.setName(employee.getName());
-            existingEmployee.setDesignationId(employee.getDesignationId());
-            existingEmployee.setMobileNo(employee.getMobileNo());
-            existingEmployee.setEmail(employee.getEmail());
-            existingEmployee.setPassword(employee.getPassword());
-            existingEmployee.setAddress(employee.getAddress());
+            existingEmployee.setUser_id(employee.getUser_id());
             existingEmployee.setCreatedBy(employee.getCreatedBy());
             existingEmployee.setUpdatedBy(employee.getUpdatedBy());
             existingEmployee.setCreationDate(employee.getCreationDate());

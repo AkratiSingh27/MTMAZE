@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@RequestMapping("/home3")
+@RequestMapping("/RequestTask")
 public class TaskController {
         @Autowired
         private TaskService taskService;

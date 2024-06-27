@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@RequestMapping("/home5")
+@RequestMapping("/RequestDesignation")
 public class DesignationController {
         @Autowired
         private DesignationService designationService;

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@RequestMapping("/page")
+@RequestMapping("/RequestProject")
 public class ProjectController {
     @Autowired
     private ProjectService ProjectService;

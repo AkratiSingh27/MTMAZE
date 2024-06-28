@@ -30,7 +30,7 @@ public class DesignationService {
     public Designation updateDesignation(Designation designation) {
         Designation existingDesignation = designationRepository.findById(designation.getId()).orElse(null); // Use instance instead of class name
 
-        existingDesignation.setRole(designation.getRole());
+        existingDesignation.setName(designation.getName());
 
         return designationRepository.save(existingDesignation); // Use instance instead of class name
 

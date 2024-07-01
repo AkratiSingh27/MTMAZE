@@ -1,10 +1,11 @@
 package com.MTMAZE.MTMAZE.service;
-import com.MTMAZE.MTMAZE.entity.Project;
-import com.MTMAZE.MTMAZE.respository.ProjectRepository;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.MTMAZE.MTMAZE.entity.Project;
+import com.MTMAZE.MTMAZE.respository.ProjectRepository;
 
 @Service
 public class ProjectService {

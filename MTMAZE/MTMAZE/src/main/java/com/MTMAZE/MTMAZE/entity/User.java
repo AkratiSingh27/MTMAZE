@@ -3,6 +3,9 @@ package com.MTMAZE.MTMAZE.entity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NonNull;
+import org.antlr.v4.runtime.misc.NotNull;
+
 @Data
 @Entity
 @Table(name = "user")

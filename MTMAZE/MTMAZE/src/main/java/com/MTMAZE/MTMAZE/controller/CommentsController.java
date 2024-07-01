@@ -18,7 +18,6 @@ public class CommentsController {
         }
 
 
-
         @GetMapping("/comments")
         public List<Comments> getAllComments() {
             return commentsService.getAllComments();

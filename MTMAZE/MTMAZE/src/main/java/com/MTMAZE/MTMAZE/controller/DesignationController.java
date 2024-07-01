@@ -16,8 +16,6 @@ public class DesignationController {
             return designationService.saveDesignation(designation);
         }
 
-
-
         @GetMapping("/designation")
         public List<Designation> getAllDesignation() {
             return designationService.getAllDesignation();

@@ -32,9 +32,6 @@ public class EmployeeService {
 
     Address permanentAddress = addressRepository.save(userEmployee.getPermanentAddress());
         Address presentAddress =     addressRepository.save(userEmployee.getPresentAddress());
-
-
-
         User user = new User();
         BeanUtils.copyProperties(userEmployee,user);
 
@@ -51,6 +48,7 @@ public class EmployeeService {
             Employee employee = new Employee();
             Date date = new Date();
             employee.setUserId(user.getId());
+            employee.setCreatedBy(user.getFirstName());
             employee.setCreationDate(date.toString());
             employee = employeeRepository.save(employee);
         }
@@ -84,4 +82,5 @@ public class EmployeeService {
         }
         return null;
     }
+
 }

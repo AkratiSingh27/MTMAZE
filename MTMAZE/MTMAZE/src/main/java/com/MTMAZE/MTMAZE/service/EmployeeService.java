@@ -1,13 +1,11 @@
 package com.MTMAZE.MTMAZE.service;
 
 import com.MTMAZE.MTMAZE.entity.Address;
-import com.MTMAZE.MTMAZE.entity.Comments;
 import com.MTMAZE.MTMAZE.entity.Employee;
 import com.MTMAZE.MTMAZE.entity.User;
 import com.MTMAZE.MTMAZE.respository.AddressRepository;
 import com.MTMAZE.MTMAZE.respository.EmployeeRepository;
 import com.MTMAZE.MTMAZE.respository.UserRepository;
-import com.fasterxml.jackson.databind.DatabindException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -50,8 +48,12 @@ public class EmployeeService {
         if(null!=user) {
             Employee employee = new Employee();
             Date date = new Date();
+            employee.setCreatedBy(user.getFirstName());
+            employee.setUpdatedBy(user.getFirstName());
             employee.setUserId(user.getId());
             employee.setCreationDate(date.toString());
+            employee.setUpdationDate(date.toString());
+
             employee = employeeRepository.save(employee);
         }
         return null;

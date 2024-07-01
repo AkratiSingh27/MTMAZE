@@ -1,14 +1,13 @@
 package com.MTMAZE.MTMAZE.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 @Data
 @Entity
 @Table(name = "comments")
 public class Comments {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     // Ensure this field exists
     private int id;
     private String task_id;

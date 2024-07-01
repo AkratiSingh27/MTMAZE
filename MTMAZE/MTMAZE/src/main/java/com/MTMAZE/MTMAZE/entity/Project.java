@@ -1,9 +1,7 @@
 package com.MTMAZE.MTMAZE.entity;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import lombok.Data;
 
 @Data
@@ -11,6 +9,7 @@ import lombok.Data;
 @Table(name = "project")
 public class Project {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     // Ensure this field exists
     private int id;
     private String name;

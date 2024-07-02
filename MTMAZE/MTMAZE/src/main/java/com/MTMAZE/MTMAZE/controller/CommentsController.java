@@ -17,7 +17,6 @@ public class CommentsController {
             return commentsService.saveComments(comments);
         }
 
-
         @GetMapping("/comments")
         public List<Comments> getAllComments() {
             return commentsService.getAllComments();
